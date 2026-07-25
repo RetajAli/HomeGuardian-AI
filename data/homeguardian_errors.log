@@ -1,0 +1,528 @@
+2026-07-21 10:25:27,745 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:25:36,337 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:25:36,459 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:25:37,247 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:25:37,360 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:25:41,675 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 10:25:46,050 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 10:25:51,819 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:25:58,047 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 10:26:09,863 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:26:16,453 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:27:27,888 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:28:59,162 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 10:29:03,611 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:29:04,741 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 10:29:23,064 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 10:30:07,621 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 23:17:43,220 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 23:18:09,943 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 23:18:12,087 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 23:18:12,911 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 23:18:13,115 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 23:18:19,062 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 23:18:21,434 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-21 23:18:22,536 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-21 23:18:51,332 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-25 15:27:02,067 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-25 15:27:14,679 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-25 15:27:21,305 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-25 15:27:23,593 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\3_🤖_AI_Assistant.py", line 16, in <module>
+    from core.rag_engine import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\rag_engine.py", line 6, in <module>
+    from langchain_community.vectorstores import FAISS
+ModuleNotFoundError: No module named 'langchain_community'
+
+2026-07-25 15:27:36,947 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-25 15:42:00,016 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+
+2026-07-25 15:42:10,573 | ERROR | Page failed to load:
+Traceback (most recent call last):
+  File "D:\HomeGuardian-AI\app.py", line 195, in main
+    selected_page.run()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Retaj\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\navigation\page.py", line 490, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\HomeGuardian-AI\pages\2_➕_Add_Appliance.py", line 20, in <module>
+    from core.document_processor import (
+    ...<2 lines>...
+    )
+  File "D:\HomeGuardian-AI\core\document_processor.py", line 7, in <module>
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+ModuleNotFoundError: No module named 'langchain_text_splitters'
+

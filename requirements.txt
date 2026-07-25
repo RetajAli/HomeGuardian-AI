@@ -1,0 +1,17 @@
+streamlit>=1.59.0
+
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+
+sentence-transformers
+huggingface-hub
+faiss-cpu
+
+pymupdf
+python-docx
+python-dotenv
+pydantic
+pandas
