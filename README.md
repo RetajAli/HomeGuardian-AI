@@ -1,214 +1,459 @@
-🏠 HomeGuardian AI
+# 🏠 HomeGuardian AI
 
-HomeGuardian AI is an AI-powered home appliance care assistant built with Python, Streamlit, LangChain, Hugging Face, FAISS, and SQLite.
+HomeGuardian AI is an **AI-powered home appliance care assistant** that helps users understand, maintain, and troubleshoot their home appliances using their official appliance manuals.
 
-It helps users add appliances from their manuals, ask appliance-specific AI questions, manage maintenance reminders, and keep repair history in one place.
+The application combines **Retrieval-Augmented Generation (RAG), LangChain, Hugging Face models, FAISS, SQLite, and Streamlit** to provide appliance-specific AI assistance.
 
-✨ Main Features
+---
 
-Automatic Appliance Setup
+## 🎯 Project Idea
 
-Upload a PDF appliance manual and HomeGuardian automatically detects:
+Home appliance manuals are often long, technical, and difficult for normal users to understand.
 
-appliance type
+HomeGuardian AI simplifies this process by allowing the user to upload an appliance manual. The system processes the manual, automatically identifies appliance information, and allows the user to ask questions in natural language.
 
-brand
+The application also helps users manage:
 
-model
+- Appliance information
+- Maintenance reminders
+- Repair history
+- Repair costs
+- AI troubleshooting
 
-appliance name
+---
 
-AI Appliance Assistant
+# ✨ Main Features
 
-Users can ask questions such as:
+## 🏠 Smart Dashboard
 
-Why is my appliance not working?
+The dashboard provides an overview of the user's appliances and their current care status.
 
-How do I clean it?
+It shows information such as:
 
-What does an error code mean?
+- Number of appliances
+- Upcoming maintenance
+- Appliances needing attention
+- Appliance status
+- Quick access to AI assistance
 
-What safety steps should I follow?
+Each appliance has an **Ask AI** button.
 
-The assistant answers using the appliance's official manual.
+When the user clicks Ask AI for a specific appliance, HomeGuardian automatically opens the AI Assistant with that appliance selected.
 
-RAG-Based Question Answering
+---
 
-PDF Manual
-   ↓
-Text Extraction
-   ↓
+## ➕ Automatic Appliance Setup
+
+Users can add an appliance by uploading its **PDF manual**.
+
+Instead of asking the user to manually enter many fields, HomeGuardian attempts to automatically detect:
+
+- Appliance type
+- Brand
+- Model
+- Appliance name
+
+This makes appliance setup simple and user-friendly.
+
+---
+
+## 🤖 AI Assistant
+
+The AI Assistant allows users to ask questions about a specific appliance.
+
+Examples:
+
+```text
+Why is my refrigerator not cooling?
+
+How should I clean the filter?
+
+What does this error code mean?
+
+How often should I maintain this appliance?
+
+What should I check if the appliance does not start?
+```
+
+HomeGuardian searches the appliance manual and uses the relevant information to generate the answer.
+
+---
+
+# 🧠 Retrieval-Augmented Generation — RAG
+
+HomeGuardian uses **Retrieval-Augmented Generation (RAG)**.
+
+Instead of asking the language model to answer only from its general knowledge, the system first searches the uploaded appliance manual.
+
+### RAG Workflow
+
+```text
+Appliance Manual PDF
+        ↓
+PDF Text Extraction
+        ↓
+Document Creation
+        ↓
 Text Splitting
-   ↓
-Embeddings
-   ↓
-FAISS Vector Store
-   ↓
+        ↓
+Text Embeddings
+        ↓
+FAISS Vector Database
+        ↓
 User Question
-   ↓
+        ↓
 Semantic Search
-   ↓
-Relevant Manual Chunks
-   ↓
-Qwen LLM
-   ↓
-Manual-Based Answer
+        ↓
+Relevant Manual Sections
+        ↓
+Qwen Language Model
+        ↓
+Final Manual-Based Answer
+```
 
-Maintenance Reminders
+This allows the AI Assistant to provide answers that are more relevant to the selected appliance.
 
-Users can:
+---
 
-add maintenance tasks
+# 🤖 AI Models Used
 
-set reminder dates
+## Answer Generation Model
 
-create recurring reminders
-
-view upcoming, overdue, and completed tasks
-
-mark maintenance as done
-
-Repair History
-
-Users can store:
-
-appliance
-
-what happened
-
-repair date
-
-cost
-
-how it was fixed
-
-technician/company
-
-replaced parts
-
-warranty information
-
-notes
-
-The page also summarizes total repairs, total spent, and latest repair date.
-
-Smart Dashboard
-
-The dashboard shows:
-
-number of appliances
-
-care reminders
-
-appliances needing attention
-
-appliance status
-
-quick actions
-
-Clicking Ask AI on an appliance card opens the AI Assistant with that same appliance already selected.
-
-Light and Dark Mode
-
-A custom animated sun/moon toggle switches between light and dark themes and remembers the user's choice in the browser.
-
-🤖 AI Models Used
-
-Text Generation
-
+```text
 Qwen/Qwen2.5-7B-Instruct
+```
 
-Used to generate the final answer from retrieved manual context.
+The Qwen model is used to generate the final response after HomeGuardian retrieves relevant information from the appliance manual.
 
-Embeddings
+---
 
+## Embedding Model
+
+```text
 sentence-transformers/all-MiniLM-L6-v2
+```
 
-Used to convert manual chunks and questions into vectors for semantic search.
+This model converts manual text and user questions into numerical vectors.
 
-🧠 LangChain Components
+These vectors allow HomeGuardian to perform **semantic search**, meaning it searches based on meaning rather than only exact words.
+
+---
+
+# 🔗 LangChain Usage
+
+HomeGuardian uses several components from the LangChain ecosystem.
+
+### LangChain Components
+
+```text
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+```
+
+The project uses:
+
+- LangChain `Document` objects
+- `RecursiveCharacterTextSplitter`
+- `HuggingFaceEmbeddings`
+- FAISS integration
+- Semantic similarity search
+
+---
+
+## Document Splitting
+
+Large appliance manuals cannot efficiently be processed as one large piece of text.
 
 HomeGuardian uses:
 
-langchain-core
-
-langchain-community
-
-langchain-text-splitters
-
-langchain-huggingface
-
-LangChain Document
-
+```python
 RecursiveCharacterTextSplitter
+```
 
+to divide the manual into smaller chunks.
+
+```text
+Full Manual
+    ↓
+Chunk 1
+Chunk 2
+Chunk 3
+Chunk 4
+...
+```
+
+Each chunk can then be searched independently.
+
+---
+
+## Embeddings
+
+HomeGuardian uses:
+
+```python
 HuggingFaceEmbeddings
+```
 
-FAISS
+with:
 
-The RAG workflow is controlled with custom Python logic rather than only a prebuilt chain.
+```text
+sentence-transformers/all-MiniLM-L6-v2
+```
 
-🛠️ Technology Stack
+The embeddings represent the meaning of each manual section numerically.
 
-Technology
+---
 
-Purpose
+## FAISS Vector Search
 
-Python
+The generated vectors are stored using **FAISS**.
 
-Main language
+FAISS allows HomeGuardian to quickly find the manual sections that are most similar to the user's question.
 
-Streamlit
+Example:
 
-Web UI
+```text
+User:
+"My refrigerator is warm"
 
-SQLite
+        ↓
 
-Appliance, maintenance, and repair data
+Semantic Search
 
-LangChain
+        ↓
 
-RAG/document components
+Manual sections about:
+- cooling problems
+- blocked airflow
+- temperature settings
+- door problems
+```
 
-Hugging Face
+---
 
-Embeddings and LLM access
+# 📅 Maintenance Reminders
 
-Qwen2.5-7B-Instruct
+HomeGuardian includes a maintenance management system.
 
-Answer generation
+Users can:
 
-all-MiniLM-L6-v2
+- Add maintenance tasks
+- Select an appliance
+- Choose a due date
+- Create recurring maintenance
+- View upcoming maintenance
+- View overdue maintenance
+- Mark maintenance as completed
 
-Embeddings
+Examples:
 
-FAISS
+```text
+Clean AC filter
 
-Vector search
+Replace refrigerator water filter
 
-PyMuPDF
+Clean washing machine drum
 
-PDF text extraction
+Check water heater
 
-HTML/CSS/JavaScript
+Clean laptop cooling vents
+```
 
-Custom UI and theme toggle
+---
 
-🗂️ Project Structure
+# 🔧 Repair History
 
+Users can also keep a history of appliance repairs.
+
+A repair record can contain:
+
+- Appliance
+- Problem
+- Repair date
+- Repair cost
+- How it was fixed
+- Technician or company
+- Replaced parts
+- Warranty information
+- Additional notes
+
+The Repair History dashboard can also display:
+
+- Total repairs
+- Total amount spent
+- Most recent repair
+
+---
+
+# 🗄️ Database
+
+HomeGuardian uses **SQLite** for local data storage.
+
+The database stores information related to:
+
+```text
+Appliances
+Maintenance Tasks
+Repair History
+Reminders
+Manual Information
+```
+
+Example relationships:
+
+```text
+Appliance
+   │
+   ├── Maintenance Tasks
+   │
+   ├── Repair History
+   │
+   └── Appliance Manual
+```
+
+---
+
+# 📄 PDF Processing
+
+HomeGuardian uses **PyMuPDF** to process uploaded PDF appliance manuals.
+
+The general process is:
+
+```text
+Upload PDF
+    ↓
+Extract Text
+    ↓
+Detect Appliance Information
+    ↓
+Create Documents
+    ↓
+Split Documents
+    ↓
+Generate Embeddings
+    ↓
+Create FAISS Index
+```
+
+---
+
+# 🎨 User Interface
+
+The interface is built using **Streamlit**.
+
+HomeGuardian contains five main pages:
+
+```text
+🏠 Dashboard
+
+➕ Add Appliance
+
+🤖 AI Assistant
+
+📅 Maintenance
+
+🔧 Repair History
+```
+
+The interface was designed to be simple for non-technical users.
+
+The application minimizes unnecessary manual input and allows AI to perform as much of the setup as possible.
+
+---
+
+# 🌙 Light & Dark Mode
+
+HomeGuardian includes a custom light/dark mode switch.
+
+The interface contains:
+
+- Dark theme
+- Light theme
+- Sun/Moon toggle
+- Browser theme persistence
+- Custom CSS
+- Custom JavaScript
+
+The selected theme is remembered while using the application.
+
+---
+
+# 🔄 Context-Aware Navigation
+
+HomeGuardian uses Streamlit Session State to pass information between pages.
+
+For example:
+
+```text
+Dashboard
+   ↓
+User clicks "Ask AI" on Toshiba appliance
+   ↓
+Toshiba appliance ID is saved
+   ↓
+AI Assistant opens
+   ↓
+Toshiba is automatically selected
+```
+
+This creates a smoother user experience.
+
+---
+
+# ⚠️ Error Handling
+
+HomeGuardian includes custom error handling.
+
+Instead of displaying large technical Python errors directly to the user, the application can display a friendly message such as:
+
+```text
+This page could not finish loading.
+Your saved information is safe.
+```
+
+The interface provides options such as:
+
+```text
+Try Again
+
+Return to Dashboard
+
+Technical Details
+```
+
+Errors can also be stored in log files for debugging.
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| Streamlit | Web application interface |
+| SQLite | Local database |
+| LangChain | RAG and document processing |
+| Hugging Face | AI models |
+| Qwen2.5-7B-Instruct | Answer generation |
+| all-MiniLM-L6-v2 | Embeddings |
+| FAISS | Vector database and semantic search |
+| PyMuPDF | PDF text extraction |
+| HTML | Custom interface elements |
+| CSS | Application styling |
+| JavaScript | Theme and UI behavior |
+
+---
+
+# 📂 Project Structure
+
+```text
 HomeGuardian-AI/
 │
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── .gitignore
-│
-├── pages/
-│   ├── 1_🏠_Dashboard.py
-│   ├── 2_➕_Add_Appliance.py
-│   ├── 3_🤖_AI_Assistant.py
-│   ├── 4_📅_Maintenance.py
-│   └── 5_🔧_Repair_History.py
 │
 ├── core/
 │   ├── database.py
@@ -219,68 +464,72 @@ HomeGuardian-AI/
 │   ├── ui.py
 │   └── cosmic_theme_toggle.py
 │
+├── pages/
+│   ├── 1_🏠_Dashboard.py
+│   ├── 2_➕_Add_Appliance.py
+│   ├── 3_🤖_AI_Assistant.py
+│   ├── 4_📅_Maintenance.py
+│   └── 5_🔧_Repair_History.py
+│
 ├── data/
-│   └── homeguardian.db
 │
 └── .streamlit/
     └── config.toml
+```
 
-File names can differ slightly depending on the final local version.
+---
 
-⚙️ How It Works
+# ⚙️ Installation
 
-Add Appliance
+## 1. Clone the repository
 
-Upload manual
-   ↓
-Extract PDF text
-   ↓
-Detect appliance information
-   ↓
-Split manual into chunks
-   ↓
-Create embeddings
-   ↓
-Store vectors in FAISS
-   ↓
-Save appliance
-
-Ask AI
-
-Choose appliance
-   ↓
-Ask question
-   ↓
-Embed question
-   ↓
-FAISS finds relevant chunks
-   ↓
-Retrieved chunks go into prompt
-   ↓
-Qwen generates the answer
-
-🚀 Installation
-
-1. Clone
-
+```bash
 git clone https://github.com/YOUR_USERNAME/HomeGuardian-AI.git
+```
+
+Then:
+
+```bash
 cd HomeGuardian-AI
+```
 
-2. Create a virtual environment
+---
 
+## 2. Create a virtual environment
+
+Windows:
+
+```powershell
 python -m venv venv
+```
 
-Activate on Windows:
+Activate it:
 
+```powershell
 .\venv\Scripts\Activate.ps1
+```
 
-3. Install dependencies
+---
 
+## 3. Install dependencies
+
+```powershell
 python -m pip install --upgrade pip
+```
+
+Then:
+
+```powershell
 python -m pip install -r requirements.txt
+```
 
-Important packages:
+---
 
+# 📦 Main Python Dependencies
+
+The project uses packages such as:
+
+```text
 streamlit
 langchain
 langchain-core
@@ -295,104 +544,223 @@ python-dotenv
 pydantic
 python-docx
 pandas
+```
 
-🔐 Environment Variables
+---
 
-Create a .env file in the project root:
+# 🔐 Environment Variables
 
+Create a file named:
+
+```text
+.env
+```
+
+inside the project folder.
+
+Example:
+
+```env
 HF_TOKEN=your_huggingface_token_here
+
 HOMEGUARDIAN_MODEL=Qwen/Qwen2.5-7B-Instruct
+```
 
-Never upload your real .env file or token to GitHub.
+> ⚠️ Never upload your real `.env` file or Hugging Face API token to GitHub.
 
-▶️ Run the App
+---
 
+# ▶️ Running HomeGuardian
+
+After activating the virtual environment:
+
+```powershell
 python -m streamlit run app.py
+```
 
-If your project includes run_homeguardian.bat, you can also double-click it to start the app with the correct virtual environment.
+The application will then open in the browser.
 
-🔒 Security Notes
+---
 
-Do not commit .env or API tokens.
+# 🚀 Windows Quick Launcher
 
-Do not commit private uploaded manuals.
+The project can also use:
 
-Local SQLite databases should normally stay out of a public repository.
+```text
+run_homeguardian.bat
+```
 
-The assistant displays safety guidance for dangerous appliance situations.
+to automatically launch the application using the correct virtual environment.
 
-📚 Concepts Applied
+This avoids manually activating the virtual environment every time.
 
-Python
+---
 
-Streamlit
+# 🔒 Security
 
-UI/UX
+Sensitive information should not be uploaded to the public repository.
 
-SQLite
+The following files should be included in `.gitignore`:
 
-CRUD
+```text
+.env
+venv/
+__pycache__/
+*.log
+data/*.db
+uploaded_manuals/
+vector_stores/
+```
 
-relational databases
+This protects:
 
-PDF processing
+- Hugging Face API tokens
+- Local database information
+- Uploaded manuals
+- Generated vector indexes
+- Local Python environments
 
-NLP
+---
 
-information extraction
+# 🧩 Software Architecture
 
-embeddings
+HomeGuardian separates different responsibilities into modules.
 
-semantic search
+```text
+UI Layer
+    ↓
+Streamlit Pages
 
+Application Logic
+    ↓
+Manual Service
+Appliance Detection
+Maintenance Logic
+
+AI Layer
+    ↓
+Document Processing
+Embeddings
 FAISS
-
 RAG
+Qwen
 
-LLMs
+Data Layer
+    ↓
+SQLite Database
+```
 
-Hugging Face
+This modular structure improves:
 
-LangChain
+- Maintainability
+- Reusability
+- Readability
+- Scalability
 
-session state
+---
 
-context-aware navigation
+# 📚 Concepts Learned and Applied
 
-error handling
+HomeGuardian demonstrates practical knowledge of:
 
-logging
+### Software Development
+- Python
+- Modular programming
+- Functions
+- Exception handling
+- Virtual environments
+- Dependency management
 
-modular architecture
+### Web Development
+- Streamlit
+- HTML
+- CSS
+- JavaScript
+- Session State
+- Multipage applications
 
-virtual environments
+### Database
+- SQLite
+- CRUD operations
+- Relational database concepts
 
-dependency management
+### Artificial Intelligence
+- Large Language Models
+- Natural Language Processing
+- Hugging Face
+- Prompt construction
+- Information extraction
 
-🔮 Future Improvements
+### RAG
+- Document loading
+- Text splitting
+- Embeddings
+- Vector databases
+- Semantic search
+- Retrieval
+- Context-based generation
 
-notifications
+### LangChain
+- Documents
+- Text splitters
+- Hugging Face integrations
+- FAISS integration
 
-OCR for scanned manuals
+### User Experience
+- Automatic appliance detection
+- Context-aware navigation
+- Simple forms
+- Light/Dark mode
+- Friendly error handling
 
-authentication
+---
 
-cloud database
+# 🔮 Future Improvements
 
-multiple households
+Possible future versions of HomeGuardian could include:
 
-voice questions
+- User accounts
+- Cloud database
+- Email notifications
+- Mobile notifications
+- OCR for scanned manuals
+- Voice AI Assistant
+- Multiple households
+- Cloud deployment
+- Automatic maintenance recommendations
+- More appliance categories
+- Faster model caching
+- Smart appliance integration
+- Mobile application
 
-automatic maintenance suggestions
+---
 
-faster caching
+# 💡 Project Goal
 
-cloud deployment
+The main goal of HomeGuardian AI is to make appliance care easier for normal users.
 
-👩‍💻 Author
+Instead of reading a long technical manual, the user can simply:
 
-Developed as an AI application project combining RAG, LangChain, Hugging Face, Streamlit, SQLite, and user-centered UI/UX design.
+```text
+Upload Manual
+      ↓
+Add Appliance
+      ↓
+Ask AI
+      ↓
+Get Manual-Based Help
+      ↓
+Track Maintenance
+      ↓
+Track Repairs
+```
 
-⭐ HomeGuardian AI
+---
 
-Upload the manual. Understand the appliance. Maintain it smarter.
+# ⭐ HomeGuardian AI
+
+### Upload the manual. Understand the appliance. Maintain it smarter.
+
+Built using:
+
+**Python • Streamlit • RAG • LangChain • Hugging Face • FAISS • SQLite**
