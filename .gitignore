@@ -1,8 +1,62 @@
-.env
-venv/
+# =========================
+# HomeGuardian AI
+# =========================
+
+# Python cache
 __pycache__/
-*.pyc
-data/manuals/*
-data/vector_store/*
-!data/manuals/.gitkeep
-!data/vector_store/.gitkeep
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Secrets / API keys
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# Windows / macOS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+data/homeguardian_errors.log
+
+# Local databases
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Uploaded appliance manuals
+uploads/
+uploaded_manuals/
+manuals/
+
+# FAISS / Vector databases
+vector_store/
+vector_stores/
+faiss_index/
+faiss_indexes/
+
+# Hugging Face / model cache
+.cache/
+huggingface/
+models/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Python build files
+build/
+dist/
+*.egg-info/
